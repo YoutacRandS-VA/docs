@@ -838,6 +838,7 @@ ul.hero-links-list.hero-events-link-list li:not(:last-child) {
   width: 16em;
   text-align: left;
   margin: 0.75em;
+  border-radius: 20px;
   background: #f6f6f6;
   text-decoration: none;
 }

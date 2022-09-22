@@ -96,7 +96,7 @@
 }
 
 .SiteSearch--input-wrapper:focus-within .SiteSearch--input-icon {
-    color: var(--orange);
+    color: var(--blue);
     opacity: 1
 }
 
@@ -166,8 +166,17 @@
     display: flex;
     align-items: stretch;
     height: calc(var(--docs-header-height) - 1px);
-    background: var(--background-color);
-    --content-indent: 1rem
+    background: rgb(255 255 255 / 79%);
+    --content-indent: 1.6rem;
+    backface-visibility: hidden;
+    backdrop-filter: saturate(172%) blur(6px);
+    transform: translateZ(0);
+    /* box-shadow: 0px 0px 1px #bbbbbbcf; */
+}
+
+[theme=dark] .SiteHeader {
+    background: hsl(200deg 5% 8% / 92%);
+    /* box-shadow: 0px 0px 1px #3c3c3ccf; */
 }
 
 .SiteHeader---shadow {
@@ -204,8 +213,8 @@
 }
 
 .SiteHeader--cloudflare-logo-link {
-    --logo-size: 2.8235294118rem;
-    --font-size: 1.17647em;
+    --logo-size: 3.1rem;
+    --font-size: 1.2em;
     display: flex;
     align-items: center;
     padding-left: var(--content-indent);
@@ -223,7 +232,7 @@
 .SiteHeader--theme-toggle {
     display: flex;
     align-items: center;
-    padding: 0 1rem
+    padding: 0 1.6rem
 }
 
 .SiteHeader--search {
@@ -259,11 +268,11 @@
 }
 
 .SiteHeader--nav-link[aria-current=page] {
-    color: var(--orange-4)
+    color: var(--blue-4)
 }
 
 [theme=dark] .SiteHeader--nav-link[aria-current=page] {
-    color: var(--code-orange)
+    color: var(--code-blue)
 }
 
 @media (max-width:48em) {
@@ -293,13 +302,13 @@
 
     .SiteHeader--cloudflare-logo-link {
         --docs-logo-lockup-gap: var(--docs-logo-lockup-gap-small);
-        --logo-size: 2.5em;
+        --logo-size: 4em;
         --font-size: 1.1em
     }
 
     .SiteHeader--theme-toggle {
         padding-left: 0;
-        padding-right: .9rem
+        padding-right: 1.1rem
     }
 }
 
@@ -470,18 +479,20 @@ html[is-site-page] .DocsContent {
 
 @media (min-width:768px) {
 .HeroImage {
-    background-image: url("/Dev-Docs-Header-Illustration-Light-Mode.svg");
+    /* background-image: url("/Dev-Docs-Header-Illustration-Light-Mode.svg"); */
+    /* background: linear-gradient(151deg, rgba(0,65,106,1) 0%, rgba(66,113,142,1) 48%, hsl(203deg 21% 83%) 97%, rgba(228,229,230,1) 100%); */
     background-repeat: no-repeat;
+    /* background-size: 100% 482px; */
     margin: 0 auto;
     position: relative;
-    box-shadow: 0 0 0px .5px white inset;
+    /* box-shadow: 0 0 0px .5px white inset; */
 }
 }
 
 @media (min-width:768px) {
 [theme=dark] .HeroImage {
-    background-image: url("/Dev-Docs-Header-Illustration-Dark-Mode.svg");
-    box-shadow: 0 0 0px .5px #1d1f20 inset;
+    /* background-image: url("/Dev-Docs-Header-Illustration-Dark-Mode.svg"); */
+    /* box-shadow: 0 0 0px .5px #1d1f20 inset; */
 }
 }
 
@@ -493,21 +504,21 @@ html[is-site-page] .DocsContent {
 
 @media (min-width:768px) {
     .ZTHeroImage {
-        background-image: url("/zt-light-background-image.svg");
+        /* background-image: url("/zt-light-background-image.svg"); */
         background-repeat: no-repeat;
         margin: 0 auto;
         position: relative;
-        box-shadow: 0 0 0px .5px white inset;
+        /* box-shadow: 0 0 0px .5px white inset; */
     }
     }
-    
+
     @media (min-width:768px) {
     [theme=dark] .ZTHeroImage {
-        background-image: url("/zt-dark-background-image.svg");
-        box-shadow: 0 0 0px .5px #1d1f20 inset;
+        /* background-image: url("/zt-dark-background-image.svg");
+        box-shadow: 0 0 0px .5px #1d1f20 inset; */
     }
     }
-    
+
     @media (max-width:768px) {
         .ZTHeroImage {
             background-image: none;
@@ -517,7 +528,6 @@ html[is-site-page] .DocsContent {
 .HeroBlockGrid {
     padding-left: .75em;
     padding-top: 2em;
-    max-width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -609,16 +619,18 @@ html[is-site-page] .DocsContent {
     flex-wrap: wrap;
     padding-left: .75em;
     padding-right: .75em;
-    margin-top: 3.5em;
+    margin-top: 7.5em;
     margin-bottom: 1em;
     justify-content: space-between;
 }
 
-.TriBlock {    
+.TriBlock {
     display: flex;
     width: 20em;
     height: 18em;
-    background: #f3f3f4;
+    border-radius: 8px;
+    background: #f8f8f8;
+    border: 1px solid hsl(0deg 0% 93%);
     padding: .5em 2em;
     margin-bottom: 1em;
 }
@@ -635,7 +647,8 @@ html[is-site-page] .DocsContent {
 }
 
 [theme=dark] .TriBlock {
-    background: #242628
+    background: hsl(197deg 10% 11%);
+    border: 1px solid #262626;
 }
 
 .TriBlock a {
@@ -699,10 +712,12 @@ html[is-site-page] .DocsContent {
 }
 
 .FeaturedContentBlock {
+   border-radius: 4px;
     display: flex;
     width: 16em;
     height: 18em;
-    background: #f3f3f4;
+    background: #f8f8f8;
+    border: 1px solid hsl(0deg 0% 93%);
     margin-top: 1em;
     margin-bottom: 1em;
     padding-bottom: .5em;
@@ -718,7 +733,8 @@ html[is-site-page] .DocsContent {
 }
 
 [theme=dark] .FeaturedContentBlock {
-    background: #242628
+    background: hsl(197deg 10% 11%);
+    border: 1px solid #262626;
 }
 
 .FeatureContentHeader {
@@ -764,9 +780,30 @@ html[is-site-page] .DocsContent {
 }
 
 .HomeTitle {
-    padding-left: .75em;
-    padding-top: 3em;
-    line-height: 5em;
+    padding-top: 2em;
+    text-align: center;
+    font-size: 2.9rem;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    padding-left: 0.05em;
+    padding-right: 0.05em;
+    margin-bottom: 5.5em;
+    background: linear-gradient(324deg,hsl(207deg 76% 31%),#000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+[theme="dark"] .HomeTitle {
+  background: linear-gradient(144deg,hsl(0deg 0% 100%),hwb(199deg 11% 12%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 @font-face {
@@ -815,6 +852,7 @@ html[is-site-page] .DocsContent {
     text-align: left;
     margin: .75em;
     background: #f3f3f4;
+    border-radius: 20px;
     text-decoration: none
 }
 
@@ -916,11 +954,11 @@ html[is-site-page] .DocsContent {
 }
 
 [theme=dark] .sponsorship-grid .sponsorship .sponsorship-links>a {
-    color: var(--code-orange)
+    color: var(--code-blue)
 }
 
 [theme=dark] .sponsorship-grid .sponsorship .sponsorship-links>a:hover {
-    background: var(--orange);
+    background: var(--blue);
     color: #fff
 }
 
@@ -1008,7 +1046,7 @@ html {
     --monospace-font-family: Menlo, "SF Mono", "Andale Mono", "Roboto Mono", Monaco, monospace;
     --font-family: var(--sans-serif-font-family);
     --cloudflare-logo-gray-rgb: 64, 64, 65;
-    --cloudflare-logo-orange-rgb: 243, 128, 32;
+    --cloudflare-logo-orange-rgb: 14, 98, 144;
     --cloudflare-logo-light-orange-rgb: 248, 173, 76;
     --orange-rgb: var(--cloudflare-logo-orange-rgb);
     --orange: rgb(var(--orange-rgb));
@@ -1181,7 +1219,7 @@ html {
     --gray-00: rgb(var(--gray-00-rgb));
     --gray-0F-rgb: 25, 27, 29;
     --gray-0F: rgb(var(--gray-0F-rgb));
-    --gray-0-rgb: 29, 31, 32;
+    --gray-0-rgb: 19, 21, 21;
     --gray-0: rgb(var(--gray-0-rgb));
     --gray-05-rgb: 36, 38, 40;
     --gray-05: rgb(var(--gray-05-rgb));
@@ -1258,8 +1296,8 @@ html[theme=dark] {
     --color-rgb: 255, 255, 255;
     --color: rgb(var(--color-rgb));
     --background-color-rgb: var(--gray-0-rgb);
-    --background-color: rgb(var(--background-color-rgb));
-    --selection-background-color: #ff9e40;
+    --background-color: hsl(200deg 5% 8%);
+    --selection-background-color: rgb(13 53 152);
     --selection-color: rgb(var(--color-rgb));
     --code-block-color: rgb(var(--color-rgb));
     --code-block-background-color: var(--gray-05);
@@ -1514,7 +1552,7 @@ html {
 }
 
 .Button-is-docs-primary {
-    background: var(--orange-5);
+    background: var(--blue-5);
     color: #fff
 }
 
@@ -1871,7 +1909,7 @@ html {
 }
 
 .CodeBlock--token-api {
-    color: var(--code-orange)
+    color: var(--code-blue)
 }
 
 .CodeBlock--token-char,
@@ -2004,7 +2042,7 @@ html {
 
 [language=markdown] .CodeBlock--token-header,
 [language=markdown] .CodeBlock--token-title {
-    color: var(--code-orange)
+    color: var(--code-blue)
 }
 
 [language=markdown] .CodeBlock--token-list {
@@ -2024,11 +2062,11 @@ html {
 }
 
 [language=sh] .CodeBlock--token-directory {
-    color: var(--code-orange)
+    color: var(--code-blue)
 }
 
 [language=sh] .CodeBlock--token-prompt {
-    color: var(--code-orange);
+    color: var(--code-blue);
     opacity: .7
 }
 
@@ -2614,7 +2652,7 @@ span.Tooltip---root {
 }
 
 [theme=dark] .TagsFilter--button-active {
-    color: var(--code-orange)
+    color: var(--code-blue)
 }
 
 .WorkerStarter {
@@ -2952,18 +2990,18 @@ span.Tooltip---root {
     padding: .5em 1em;
     background: rgba(var(--orange-rgb), .15);
     border-radius: 0 0 .25em .25em;
-    z-index: 100
+    z-index: 100;
 }
 
 .DocsNavLogoLockup {
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    --gap: var(--docs-logo-lockup-gap)
+    --gap: var(--docs-logo-lockup-gap);
 }
 
 .DocsNavLogoLockup.DocsNavLogoLockup-with-small-gap {
-    --gap: var(--docs-logo-lockup-gap-small)
+    --gap: var(--docs-logo-lockup-gap-small);
 }
 
 .DocsNavLogoLockup--logo {
@@ -2972,20 +3010,33 @@ span.Tooltip---root {
     width: var(--size);
     color: var(--orange);
     margin-right: var(--gap);
+    padding-top: 0.5em;
     flex-shrink: 0;
-    fill: var(--orange)
+    fill: var(--orange);
+}
+
+.DocsNavLogoLockup--logo .logo-dark {
+  display: none;
+}
+[theme=dark] .DocsNavLogoLockup--logo .logo {
+  display: none;
+}
+
+[theme=dark] .DocsNavLogoLockup--logo .logo-dark {
+  display: block;
 }
 
 .DocsNavLogoLockup--logo path {
-    fill: var(--orange)
+    fill: var(--orange);
 }
 
 .DocsNavLogoLockup--text {
     font-size: var(--font-size, 1em);
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1;
     padding-top: .05em;
-    letter-spacing: -.03em
+    margin-left: 0.5em;
+    letter-spacing: -.03em;
 }
 
 @-moz-document url-prefix() {
@@ -2996,16 +3047,16 @@ span.Tooltip---root {
 
 .DocsNavLogoLockup--text [data-text=Cloudflare]~[data-text=Docs] {
     font-weight: 500;
-    margin-left: -.05em
+    margin-left: -.05em;
 }
 
 @media (max-width:768px) {
     .DocsNavLogoLockup--text {
-        font-weight: 600
+        font-weight: 400;
     }
 
     .DocsNavLogoLockup--text [data-text=Cloudflare]~[data-text=Docs] {
-        font-weight: 400
+        font-weight: 400;
     }
 }
 
@@ -3017,12 +3068,12 @@ html[is-docs-page] body {
 }
 
 .DocsPage {
-    --sixty-four-px-rem: 3.7647058824rem;
+    --sixty-four-px-rem: 4.1rem;
     --docs-content-gap: var(--sixty-four-px-rem);
     --docs-header-height: var(--sixty-four-px-rem);
-    --docs-sidebar-width: 18.25rem;
+    --docs-sidebar-width: 17rem;
     --docs-body-sidebar-width: var(--docs-sidebar-width);
-    --docs-page-side-padding: 1rem;
+    --docs-page-side-padding: 1.6rem;
     --docs-max-page-width: 1440px;
     --docs-page-width: var(--docs-max-page-width);
     --docs-sidebars-combined-width: calc(var(--docs-sidebar-width) + var(--docs-body-sidebar-width));
@@ -3046,7 +3097,7 @@ html[is-docs-page] body {
 
 @media (max-width:1350px) {
     .DocsPage {
-        --docs-sidebar-width: 18rem
+        --docs-sidebar-width: 17rem
     }
 }
 
@@ -3081,7 +3132,7 @@ html[is-docs-page] body {
     bottom: 0;
     --sidebar-background-color: var(--background-color);
     --content-indent: var(--docs-page-side-padding);
-    --logo-size: 2.8235294118rem;
+    --logo-size: 3.1rem;
     --text-indent: calc(var(--content-indent) + var(--logo-size) + var(--docs-logo-lockup-gap) + 0.1em);
     width: var(--docs-sidebar-width);
     z-index: 2
@@ -3237,7 +3288,7 @@ html[is-docs-page] body {
 }
 
 .DocsSidebar--cloudflare-logo-link {
-    --font-size: 1.17647em;
+    --font-size: 1.2em;
     display: flex;
     align-items: center;
     padding-left: var(--content-indent);
@@ -3411,7 +3462,7 @@ html[is-docs-page] body {
     }
 
     [theme=dark] .DocsSidebar--nav-expand-collapse-button:hover {
-        color: var(--code-orange);
+        color: var(--code-blue);
         background: rgba(var(--orange-rgb), .08)
     }
 }
@@ -3601,7 +3652,7 @@ html[is-docs-page] body {
 
 @media (hover:hover) {
     [theme=dark] .DocsSidebar--nav-link:hover .DocsSidebar--nav-link-text {
-        color: var(--code-orange)
+        color: var(--code-blue)
     }
 
     [theme=dark] .DocsSidebar--nav-link:hover .DocsSidebar--nav-link-text:before {
@@ -3610,7 +3661,7 @@ html[is-docs-page] body {
 }
 
 [theme=dark] .DocsSidebar--nav-link[is-active] .DocsSidebar--nav-link-text {
-    color: var(--code-orange)
+    color: var(--code-blue)
 }
 
 [theme=dark] .DocsSidebar--nav-link[is-active] .DocsSidebar--nav-link-text:before {
@@ -3902,17 +3953,17 @@ html[is-docs-page] body {
 .DocsMarkdown--link {
     text-decoration: none;
     color: inherit;
-    --background-color-rgb: var(--orange-rgb);
-    --background-color-alpha: .08;
-    --border-bottom-color-rgb: var(--orange-3-rgb);
+    /* --background-color-rgb: var(--blue-rgb);
+    --background-color-alpha: .08; */
+    --border-bottom-color-rgb: var(--blue-3-rgb);
     --border-bottom-color-alpha: .3;
-    --background-color: rgba(var(--background-color-rgb), var(--background-color-alpha));
+    /* --background-color: rgba(var(--background-color-rgb), var(--background-color-alpha)); */
     --focus-shadow: 0 0 0 var(--focus-size) var(--focus-color);
     box-shadow: var(--focus-shadow)
 }
 
 .DocsMarkdown--link .DocsMarkdown--link-content {
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     border-bottom: 1px solid rgba(var(--border-bottom-color-rgb), var(--border-bottom-color-alpha))
 }
 
@@ -3982,11 +4033,15 @@ html[is-docs-page] body {
     --background-color-alpha: .03;
     --border-bottom-color-rgb: var(--orange-rgb);
     --border-bottom-color-alpha: .35;
-    color: var(--code-orange)
+    color: var(--code-blue)
 }
 
 [theme=dark] .DocsMarkdown--link:hover {
     --background-color-alpha: .08
+}
+
+a.DocsMarkdown--link {
+  background-color: transparent !important;
 }
 
 .DocsMarkdown strong {
@@ -4501,6 +4556,10 @@ blockquote .DocsMarkdown--header-anchor-positioner {
     padding-bottom: .1875em
 }
 
+a.DocsMarkdown--link {
+  background-color: transparent !important;
+}
+
 .DocsMarkdown tbody tr:not(:last-child) td {
     border-bottom: 1px solid var(--border-color)
 }
@@ -4746,7 +4805,8 @@ blockquote .DocsMarkdown--header-anchor-positioner {
 .DocsToolbar--search {
     flex: 1 1;
     max-width: var(--docs-body-width);
-    margin-right: auto
+    margin-right: auto;
+    visibility: hidden;
 }
 
 [search-disabled] .DocsToolbar--search {
@@ -4897,6 +4957,13 @@ blockquote .DocsMarkdown--header-anchor-positioner {
     color: var(--orange);
     opacity: 1
 }
+.DocsSearch--input-bottom-border {
+  display: none;
+}
+
+/* [theme=dark] .DocsSearch--input {
+    background: linear-gradient(90deg, rgba(var(--shadow-color-rgb), .1) 0, rgba(var(--shadow-color-rgb), .1) calc(30% - 6em), rgba(var(--shadow-color-rgb), 0) 30%)
+} */
 
 .DocsSearch--input-bottom-border {
     position: absolute;
@@ -4905,10 +4972,6 @@ blockquote .DocsMarkdown--header-anchor-positioner {
     bottom: 0;
     height: 1px;
     background: linear-gradient(90deg, rgba(var(--color-rgb), .07) 0, rgba(var(--color-rgb), .07) calc(100% - 6em), rgba(var(--color-rgb), 0))
-}
-
-[theme=dark] .DocsSearch--input {
-    background: linear-gradient(90deg, rgba(var(--shadow-color-rgb), .1) 0, rgba(var(--shadow-color-rgb), .1) calc(30% - 6em), rgba(var(--shadow-color-rgb), 0) 30%)
 }
 
 [theme=dark] .DocsSearch--input-bottom-border {
@@ -4923,7 +4986,7 @@ blockquote .DocsMarkdown--header-anchor-positioner {
     width: 100%;
     bottom: 0;
     height: 1px;
-    background: linear-gradient(90deg, rgba(var(--shadow-color-rgb), .5) 0, rgba(var(--shadow-color-rgb), .5) calc(100% - 6em), rgba(var(--shadow-color-rgb), 0))
+    /* background: linear-gradient(90deg, rgba(var(--shadow-color-rgb), .5) 0, rgba(var(--shadow-color-rgb), .5) calc(100% - 6em), rgba(var(--shadow-color-rgb), 0)) */
 }
 
 .DocsSearch .ds-suggestion {
@@ -5137,7 +5200,7 @@ blockquote .DocsMarkdown--header-anchor-positioner {
 
 .DocsFooter {
     margin-left: var(--docs-sidebar-width);
-    padding: 3.5rem 0;
+    padding: 1.5rem 0;
     padding-left: var(--docs-content-gap);
     padding-right: calc(var(--docs-body-sidebar-width) + var(--docs-content-gap));
     --border-color: rgba(var(--color-rgb), .08);

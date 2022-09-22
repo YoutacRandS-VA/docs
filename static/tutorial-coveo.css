@@ -17,7 +17,7 @@
 .CoveoSearchInterface .magic-box .magic-box-input,
 .CoveoSearchInterface .magic-box .magic-box-clear,
 .CoveoDynamicFacet,
-.CoveoDynamicFacetRange, 
+.CoveoDynamicFacetRange,
 .CoveoDynamicHierarchicalFacet,
 .CoveoSearchInterface input,
 .CoveoSearchInterface.coveo-small-facets .coveo-facet-dropdown-header {
@@ -90,15 +90,15 @@
   line-height: 1.25em !important;
 }
 
-[theme="dark"] .CoveoResult a.CoveoResultLink, 
-[theme="dark"] .CoveoResultLink, 
+[theme="dark"] .CoveoResult a.CoveoResultLink,
+[theme="dark"] .CoveoResultLink,
 [theme="dark"] a.CoveoResultLink,
 [theme="dark"] .coveo-accessible-button.coveo-clickable
 {
   --background-color-alpha: 0.03 !important;
-  --border-bottom-color-rgb: var(--orange-rgb) !important;
+  --border-bottom-color-rgb: var(--blue-rgb) !important;
   --border-bottom-color-alpha: 0.35 !important;
-  
+
 }
 
 .DocsMarkdown ul {
