@@ -273,26 +273,26 @@ export function dropdowns() {
 
 export function toggleSidebar() {
 
-  const toggleButton = document.getElementsByClassName("toggleSidebar");
-  if(toggleButton){
-    let div = document.querySelector(".DocsSidebar--sections .toggleSidebar")
-    let btn = div.querySelector("button");
-    btn.addEventListener("click", () => {
-      let classToggleList = ['.DocsSidebar', '.DocsToolbar', '.DocsFooter', '.DocsContent', '.DocsMarkdown', '.DocsSidebar--sections .toggleSidebar'];
-      
-      classToggleList.forEach(function(querySelector){
-        let item = document.querySelector(querySelector);
-        item.classList.toggle('collapsed');
-      });
+  // const toggleButton = document.getElementsByClassName("toggleSidebar");
+  // if(toggleButton){
+  //   let div = document.querySelector(".DocsSidebar--sections .toggleSidebar")
+  //   let btn = div.querySelector("button");
+  //   btn.addEventListener("click", () => {
+  //     let classToggleList = ['.DocsSidebar', '.DocsToolbar', '.DocsFooter', '.DocsContent', '.DocsMarkdown', '.DocsSidebar--sections .toggleSidebar'];
 
-      let attr = 'is-visually-hidden';
-      let attrToggleList = ['.DocsSidebar--nav-item', '.DocsSidebar--section-more', '.DocsSidebar--docs-title-section a div span span', '.DocsSidebar--header-section a div span'];
+  //     classToggleList.forEach(function(querySelector){
+  //       let item = document.querySelector(querySelector);
+  //       item.classList.toggle('collapsed');
+  //     });
 
-      attrToggleList.forEach(function(querySelector){
-        let item = document.querySelector(querySelector);
-        let isHidden = item.hasAttribute(attr);
-        item.toggleAttribute(attr, !isHidden);
-      });
-  });
-  }
+  //     let attr = 'is-visually-hidden';
+  //     let attrToggleList = ['.DocsSidebar--nav-item', '.DocsSidebar--section-more', '.DocsSidebar--docs-title-section a div span span', '.DocsSidebar--header-section a div span'];
+
+  //     attrToggleList.forEach(function(querySelector){
+  //       let item = document.querySelector(querySelector);
+  //       let isHidden = item.hasAttribute(attr);
+  //       item.toggleAttribute(attr, !isHidden);
+  //     });
+  // });
+  // }
 }

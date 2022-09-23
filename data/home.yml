@@ -1,9 +1,9 @@
 meta:
-  title: Cloudflare Docs
-  description: Browse the latest product docs including how-to guides, tutorials, API reference, and sample code.
-  author: '@cloudflare'
+  title: Atreyu Docs
+  description: The official documentation site for atreyu and cloudless.
+  author: '@cloudless'
   image: /cf-twitter-card.png
 
 externals:
-  - title: Cloudflare homepage
-    url: https://cloudflare.com
+  - title: Cloudless homepage
+    url: https://cloudless.one

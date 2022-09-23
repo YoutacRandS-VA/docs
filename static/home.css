@@ -302,7 +302,7 @@
 
     .SiteHeader--cloudflare-logo-link {
         --docs-logo-lockup-gap: var(--docs-logo-lockup-gap-small);
-        --logo-size: 4em;
+        --logo-size: 3.1rem;
         --font-size: 1.1em
     }
 
@@ -780,6 +780,7 @@ html[is-site-page] .DocsContent {
 }
 
 .HomeTitle {
+    user-select: none;
     padding-top: 2em;
     text-align: center;
     font-size: 2.9rem;
@@ -788,13 +789,24 @@ html[is-site-page] .DocsContent {
     letter-spacing: -0.01em;
     padding-left: 0.05em;
     padding-right: 0.05em;
-    margin-bottom: 5.5em;
+    margin-bottom: 1.7em;
     background: linear-gradient(324deg,hsl(207deg 76% 31%),#000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+@media (max-width:768px) {
+  .HomeTitle {
+    font-size: 2.7rem;
+  }
+}
+
+@media (max-width:718px) {
+  .HomeTitle {
+    font-size: 1.7rem;
+  }
 }
 
 [theme="dark"] .HomeTitle {
@@ -851,13 +863,15 @@ html[is-site-page] .DocsContent {
     width: 16em;
     text-align: left;
     margin: .75em;
-    background: #f3f3f4;
+    background: #f8f8f8;
+    border: 1px solid hsl(0deg 0% 93%);
     border-radius: 20px;
     text-decoration: none
 }
 
 [theme=dark] .sponsorship-grid .sponsorship {
-    background: #242628
+    background: hsl(197deg 10% 11%);
+    border: 1px solid #262626;
 }
 
 @media (max-width:48em) {
@@ -1050,7 +1064,7 @@ html {
     --cloudflare-logo-light-orange-rgb: 248, 173, 76;
     --orange-rgb: var(--cloudflare-logo-orange-rgb);
     --orange: rgb(var(--orange-rgb));
-    --orange-for-use-as-selection-color: #ef9530;
+    --orange-for-use-as-selection-color: #b3b3b3;
     --light-blue-rgb: 79, 140, 200;
     --light-blue: rgb(var(--light-blue-rgb));
     --blue-rgb: 0, 81, 127;
@@ -1246,7 +1260,7 @@ html {
     --code-gray: #a7a7a3;
     --code-red: #ed8978;
     --code-orange: #fba056;
-    --code-gold: #fdda68;
+    --code-gold: #dbdb00;
     --code-green: #57c78f;
     --code-blue: #78c0ed;
     --code-cyan: #71e4f4;
@@ -1481,6 +1495,28 @@ html {
     opacity: .5
 }
 
+.Button.hero {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 39px;
+    margin: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: 36px;
+}
+
+.Button-is-docs-primary.hero {
+  background-image: linear-gradient(148deg,hsl(204deg 100% 62%),hsl(0deg 0% 0%));
+}
+
+.DocsMarkdown--button-group.hero {
+  margin-bottom: 12.8em;
+}
+
+.hero > .DocsMarkdown--button-group-content {
+  justify-content: center;
+}
+
 @media (hover:hover) {
     .Button:hover {
         --hover-box-shadow-color: hsla(0, 0%, 100%, 0.2)
@@ -1708,7 +1744,7 @@ html {
 .CodeBlock--filename,
 .CodeBlock--header {
     display: block;
-    background: rgba(var(--color-rgb), .05);
+    background: rgba(var(--color-rgb), .03);
     box-shadow: 0 1px rgba(var(--shadow-color-rgb), .12);
     padding: .4em var(--padding-horizontal);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
@@ -1873,6 +1909,10 @@ html {
 .CodeBlock--token-operator,
 .CodeBlock--token-template-string.CodeBlock--token-interpolation.CodeBlock--token-interpolation-punctuation {
     color: var(--code-red)
+}
+
+.CodeBlock--token-literal-property {
+  color: #4f98f8;
 }
 
 .CodeBlock--token-class,
@@ -2122,7 +2162,7 @@ html {
     width: 100%;
     height: 100%;
     border-radius: 99em;
-    background: rgba(var(--gray-6-rgb), .7);
+    background: rgba(var(--gray-6-rgb), .4);
     cursor: pointer;
     box-shadow: 0 0 0 var(--focus-size) var(--focus-color)
 }
@@ -2133,7 +2173,7 @@ html {
 
 .ThemeToggle--input:checked~.ThemeToggle--toggle,
 [theme=dark] .ThemeToggle[data-is-loading=true] .ThemeToggle--toggle {
-    background: rgba(var(--gray-2-rgb), .7)
+    background: rgba(var(--gray-2-rgb), .5)
 }
 
 .ThemeToggle--toggle-handle {
@@ -2193,7 +2233,7 @@ html {
 
 .ThemeToggle--input:checked~.ThemeToggle--toggle .ThemeToggle--sun,
 [theme=dark] .ThemeToggle[data-is-loading=true] .ThemeToggle--sun {
-    color: rgba(var(--gray-6-rgb), .8)
+    color: rgba(var(--gray-6-rgb), .4)
 }
 
 [theme-is-changing] * {
@@ -5104,11 +5144,16 @@ a.DocsMarkdown--link {
     background: var(--background-color);
     box-shadow: 0 1px rgba(var(--shadow-color-rgb), .075), 0 .2em .3em -.1em rgba(var(--shadow-color-rgb), .075);
     z-index: 10;
-    --content-indent: .666em
+    --content-indent: .666em;
+    background: rgb(255 255 255 / 79%);
+    --content-indent: 1.6rem;
+    backface-visibility: hidden;
+    backdrop-filter: saturate(172%) blur(6px);
+    transform: translateZ(0);
 }
 
 [theme=dark] .DocsMobileTitleHeader {
-    background: var(--gray-05)
+  background: hsl(200deg 5% 8% / 92%);
 }
 
 @media (min-width:769px) {

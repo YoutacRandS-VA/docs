@@ -1,4 +1,10 @@
-<p class="DocsMarkdown--button-group">
+{{- $class := slice "DocsMarkdown--button-group" -}}
+{{- with .Get "class" }}
+  {{- $class = $class | append . -}}
+{{- end -}}
+
+{{- $class := delimit $class " " -}}
+<p class="{{ $class }}">
   <span class="DocsMarkdown--button-group-content">
     {{ .Inner }}
   </span>

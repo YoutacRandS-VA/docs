@@ -1,6 +1,6 @@
-baseURL = "https://developers.cloudflare.com"
+baseURL = "https://atreyu.dev"
 
-title = "Cloudflare Docs"
+title = "Atreyu Docs"
 languageCode = "en"
 DefaultContentLanguage = "en"
 disableHugoGeneratorInject = true
@@ -12,17 +12,10 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 enableEmoji = true
 enableGitInfo = true
 
-# TODO
 rssLimit = 10
 
 paginate = 12 # default 10
 paginatePath = "page" # default
-
-# Coveo is a search solution - the following read-only token is used from the frontend to execute search queries
-[params.coveo]
-org = "cloudflareproduction7iy98g48"
-token = "xx2b20a6dc-ce86-41cb-ad18-90bd2568dcdb"
-tutorial_token = "xxa5a7d4c9-db72-424d-860d-ae68ff7f60ac"
 
 [sitemap]
   changefreq = "daily"

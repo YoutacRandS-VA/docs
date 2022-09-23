@@ -319,7 +319,7 @@ html {
   --code-gray: #a7a7a3;
   --code-red: hsl(1deg 100% 49%);
   --code-orange: orange;
-  --code-gold: #ccc900;
+  --code-gold: #dbdb00;
   --code-green: #57d02f;
   --code-blue: #78c0ed;
   --code-cyan: #0cf;
@@ -863,7 +863,7 @@ html {
 .CodeBlock--filename,
 .CodeBlock--header {
   display: block;
-  background: rgba(var(--color-rgb), 0.05);
+  background: rgba(var(--color-rgb), 0.03);
   box-shadow: 0 1px rgba(var(--shadow-color-rgb), 0.12);
   padding: 0.4em var(--padding-horizontal);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
@@ -1046,6 +1046,10 @@ html {
 .CodeBlock--token-operator,
 .CodeBlock--token-template-string.CodeBlock--token-interpolation.CodeBlock--token-interpolation-punctuation {
   color: var(--code-red);
+}
+
+.CodeBlock--token-literal-property {
+  color: #4f98f8;
 }
 
 .CodeBlock--token-class,
@@ -1304,7 +1308,7 @@ html {
   width: 100%;
   height: 100%;
   border-radius: 99em;
-  background: rgba(var(--gray-6-rgb), 0.7);
+  background: rgba(var(--gray-6-rgb), 0.4);
   cursor: pointer;
   box-shadow: 0 0 0 var(--focus-size) var(--focus-color);
 }
@@ -1315,7 +1319,7 @@ html {
 
 .ThemeToggle--input:checked ~ .ThemeToggle--toggle,
 [theme="dark"] .ThemeToggle[data-is-loading="true"] .ThemeToggle--toggle {
-  background: rgba(var(--gray-2-rgb), 0.7);
+  background: rgba(var(--gray-2-rgb), 0.5);
 }
 
 .ThemeToggle--toggle-handle {
@@ -4626,7 +4630,7 @@ blockquote .DocsMarkdown--header-anchor-positioner {
 }
 
 [theme="dark"] .DocsMobileHeader {
-  background: var(--gray-05);
+  background: hsl(200deg 5% 8%);
 }
 
 @media (min-width: 769px) {
@@ -4668,15 +4672,18 @@ blockquote .DocsMarkdown--header-anchor-positioner {
   width: 100%;
   padding-right: 0.5rem;
   height: var(--docs-header-height);
-  background: var(--background-color);
   box-shadow: 0 1px rgba(var(--shadow-color-rgb), 0.075),
     0 0.2em 0.3em -0.1em rgba(var(--shadow-color-rgb), 0.075);
   z-index: 10;
   --content-indent: 0.666em;
+  background: rgb(255 255 255 / 79%);
+  backface-visibility: hidden;
+  backdrop-filter: saturate(172%) blur(6px);
+  transform: translateZ(0);
 }
 
 [theme="dark"] .DocsMobileTitleHeader {
-  background: var(--gray-05);
+  background: hsl(200deg 5% 8% / 92%);
 }
 
 @media (min-width: 769px) {
