@@ -3235,7 +3235,7 @@ a.DocsMarkdown--link {
 }
 
 .DocsContent {
-  padding: 2.6rem var(--docs-content-gap) 3.5rem;
+  padding: 1.8rem var(--docs-content-gap) 3.5rem;
   min-height: calc(100vh - 12.5em);
   transition: padding 150ms ease-in-out;
   transition-property: padding;
@@ -4672,8 +4672,8 @@ blockquote .DocsMarkdown--header-anchor-positioner {
   width: 100%;
   padding-right: 0.5rem;
   height: var(--docs-header-height);
-  box-shadow: 0 1px rgba(var(--shadow-color-rgb), 0.075),
-    0 0.2em 0.3em -0.1em rgba(var(--shadow-color-rgb), 0.075);
+  /* box-shadow: 0 1px rgba(var(--shadow-color-rgb), 0.075),
+    0 0.2em 0.3em -0.1em rgba(var(--shadow-color-rgb), 0.075); */
   z-index: 10;
   --content-indent: 0.666em;
   background: rgb(255 255 255 / 79%);
