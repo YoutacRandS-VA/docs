@@ -8,3 +8,4 @@ node_modules
 /public
 /assets/jsconfig.json
 disabled-content
+edge/build

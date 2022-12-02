@@ -16,7 +16,12 @@ The quickest way to experiment with Cloudflare Workers is in the [Playground](ht
 
 {{</Aside>}}
 
-## 1. Install Wrangler (Workers CLI)
+## 1. Install
+
+Installation
+deno run https://atreyu.dev/ayu@latest/cli/install.js
+You will see 3 prompts: 2 to check DENO_HOME and HOME environmnet variables, to determine where to install and the final write access to install the cli.
+
 
 Installing `wrangler`, the Workers command-line interface (CLI), allows you to [`init`](/workers/wrangler/commands/#init), [`dev`](/workers/wrangler/commands/#dev), and [`publish`](/workers/wrangler/commands/#publish) your Workers projects.
 
@@ -34,7 +39,7 @@ $ yarn global add wrangler
 
 ## 2. Authenticate Wrangler
 
-To authenticate Wrangler, run `wrangler login`: 
+To authenticate Wrangler, run `wrangler login`:
 
 ```sh
 $ wrangler login
@@ -61,7 +66,7 @@ In your terminal, you will be asked:
 
 {{<Aside type="note" header="TypeScript">}}
 
-`wrangler init` will prompt you to choose y/n to `Would you like to use TypeScript? (y/n)`. If you indicate yes, you will get an `index.ts` file instead of a `index.js` file and Wrangler will also generate a `tsconfig.json` file in the root of your project. 
+`wrangler init` will prompt you to choose y/n to `Would you like to use TypeScript? (y/n)`. If you indicate yes, you will get an `index.ts` file instead of a `index.js` file and Wrangler will also generate a `tsconfig.json` file in the root of your project.
 
 {{</Aside>}}
 
@@ -71,7 +76,7 @@ After you have created your new Worker, `cd` into your new project directory:
 
 ```sh
 $ cd <YOUR_WORKER>
-``` 
+```
 
 In your project directory, `wrangler init` has generated the following files:
 
@@ -84,7 +89,7 @@ In your project directory, `wrangler init` has generated the following files:
 
 ## 4. Run your development server
 
-After you have created your first Worker, run the [`wrangler dev`](/workers/wrangler/commands/#dev) command to start a local server for developing your Worker. This will allow you to test your Worker in development. 
+After you have created your first Worker, run the [`wrangler dev`](/workers/wrangler/commands/#dev) command to start a local server for developing your Worker. This will allow you to test your Worker in development.
 
 ```sh
 $ wrangler dev
@@ -114,7 +119,7 @@ This code block consists of four parts:
 
 2. The event handler: `async fetch(request)`
 
-The event handler indicates what events the Worker should listen to, such as [`fetch`](/workers/runtime-apis/fetch-event/) or [`scheduled`](/workers/runtime-apis/scheduled-event/). 
+The event handler indicates what events the Worker should listen to, such as [`fetch`](/workers/runtime-apis/fetch-event/) or [`scheduled`](/workers/runtime-apis/scheduled-event/).
 
 3. Parameters: `request`, `env`, `context`
 

@@ -6,18 +6,13 @@ weight: 1
 # Intro
 
 ## What is Atreyu?
-Atreyu is an edge- and serviceworker- first framework to build data rich web applications that sync data in real time and work offline. Typically these applications are open for a long time and so optimize for constant use over initial load performance and rarely need to be server rendered.
+Atreyu is an edge- and serviceworker- first framework for the most demanding personal web applications.
 
-Atreyu is made for a smooth transition from working prototype to production ready mission critical software. This requires minimal boilerplate and optional typings and schemas that can be gradually added as the project matures
+It supports real time data sync, offline usage and long lasting open tabs. Atreyu is made for a smooth transition from working prototype to production ready mission critical software and requires minimal boilerplate and only optional typings and schemas that can be gradually added as the project matures.
 
 {{<Aside type="warning">}}
 This is an early developer preview. The goal is to get early feedback and improve the developer experience and high level design. Expect changes of the API and stability issues.
 {{</Aside>}}
-
-## Naming
-Atreyu is a hero in _The never ending story_ who enables the success of the protagonist together with falcor. Sitting between [falcor](https://netflix.github.io/falcor/) and [svelte](https://svelte.dev) in the tech stack this is a fitting description. In most contexts atreyu is simply written as _ayu_.
-
-Cloudless is the parent compnay offerring consulting, hosting and custom development.
 
 ## Where in the ecosystem does atreyu live?
 
