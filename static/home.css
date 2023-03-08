@@ -1510,7 +1510,7 @@ html {
 }
 
 .DocsMarkdown--button-group.hero {
-  margin-bottom: 12.8em;
+  margin-bottom: 15.8em;
 }
 
 .hero > .DocsMarkdown--button-group-content {
@@ -3077,6 +3077,10 @@ span.Tooltip---root {
     padding-top: .05em;
     margin-left: 0.5em;
     letter-spacing: -.03em;
+}
+
+[theme=light] .DocsNavLogoLockup--text {
+  color: rgb(58, 64, 64);
 }
 
 @-moz-document url-prefix() {
@@ -4893,7 +4897,11 @@ a.DocsMarkdown--link {
     display: block;
     height: 100%;
     width: 100%;
-    padding: .1em
+    padding: .1em;
+}
+
+[theme=light] .DocsToolbar--tools-icon-item-content>a {
+  color: rgb(73 73 75);
 }
 
 @media (max-width:768px) {

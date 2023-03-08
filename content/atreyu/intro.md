@@ -155,3 +155,5 @@ currently out of scope or non-Goals
 ## Motivation
 Atreyu is intended to be run completely on edge servers with a 4 layer data-caching system (in tab memory, indexedDB via service worker, edge cache, db).
 The atreyu backend currently runs on cloudflare worker infrastructure or in browser service workers, but this is likely to become the standard for edge workers, so google and others may be releasing compatible offerings next to cloudflare in the future.
+
+local first meta framework with netflix falcor, pouchdb/couchdb sync, svelte and an service worker/edge worker first approach. Falcor is used for state management, caching, batching, resource sharing etc. and views are bound to the virtual data object with a js proxy based store implementation. The falcor router runs inside a service worker and can serve all open tabs and transparently only forward requests to the edge workers or other sources when it cannot answer itself.
