@@ -2267,6 +2267,10 @@ span.Tooltip---root {
   }
 }
 
+[theme=light] .DocsNavLogoLockup--text {
+  color: rgb(58, 64, 64);
+}
+
 html[is-docs-page],
 html[is-docs-page] body {
   scroll-behavior: smooth;
@@ -4301,6 +4305,10 @@ blockquote .DocsMarkdown--header-anchor-positioner {
   .DocsToolbar--tools-spacer {
     display: none;
   }
+}
+
+[theme=light] .DocsToolbar--tools-icon-item-content>a {
+  color: rgb(73 73 75);
 }
 
 .DocsSearch {

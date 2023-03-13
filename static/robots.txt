@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /client-ip-geolocation
 
-Sitemap: https://developers.cloudflare.com/sitemap.xml
+Sitemap: https://atreyu.dev/docs/sitemap.xml

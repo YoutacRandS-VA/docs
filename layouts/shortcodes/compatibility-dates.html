@@ -1,6 +1,6 @@
 {{- $files := slice -}}
-{{- range os.ReadDir "content/workers/_partials/_platform-compatibility-dates" -}}
-  {{- with $.Site.GetPage (path.Join "workers/_partials/_platform-compatibility-dates/" .Name) -}}
+{{- range os.ReadDir "content/atreyu/_partials/_platform-compatibility-dates" -}}
+  {{- with $.Site.GetPage (path.Join "atreyu/_partials/_platform-compatibility-dates/" .Name) -}}
     {{- $files = $files | append (dict "name" .Params.name "date" .Params.date "experimental" (default false .Params.experimental) "enable_date" .Params.enable_date "enable_flag" .Params.enable_flag "disable_flag" .Params.disable_flag "content" (trim .RawContent "\n")) -}}
   {{- end -}}
 {{- end -}}

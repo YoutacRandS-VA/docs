@@ -1,9 +1,8 @@
 {
   "private": true,
   "version": "1.0.0",
-  "name": "cloudflare-docs",
-  "repository": "cloudflare/cloudflare-docs",
-  "description": "Cloudflare Developer Docs",
+  "name": "atreyu-docs",
+  "description": "Atreyu Developer Docs",
   "scripts": {
     "dev": "hugo serve -D",
     "lint": "tsm bin/format.ts --check",
