@@ -1,4 +1,4 @@
-baseURL = "https://atreyu.dev"
+baseURL = "https://atreyu.dev/docs/"
 
 title = "Atreyu Docs"
 languageCode = "en"

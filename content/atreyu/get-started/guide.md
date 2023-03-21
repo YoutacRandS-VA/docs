@@ -2,6 +2,7 @@
 title: Guide
 pcx_content_type: get-started
 weight: 1
+hidden: true
 meta:
   title: Get started guide
 ---
@@ -19,7 +20,7 @@ The quickest way to experiment with Cloudflare Workers is in the [Playground](ht
 ## 1. Install
 
 Installation
-deno run https://atreyu.dev/ayu@latest/cli/install.js
+deno run --reload https://atreyu.dev/ayu@latest/cli/install.js
 You will see 3 prompts: 2 to check DENO_HOME and HOME environmnet variables, to determine where to install and the final write access to install the cli.
 
 

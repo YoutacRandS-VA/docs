@@ -1,6 +1,7 @@
 ---
 title: Storage options guide
 pcx_content_type: concept
+hidden: true
 weight: 2
 meta:
   title: Storage options guide

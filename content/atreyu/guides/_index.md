@@ -1,6 +1,6 @@
 ---
 pcx_content_type: navigation
-title: Learning
+title: Guides
 hidden: true
 weight: 5
 ---

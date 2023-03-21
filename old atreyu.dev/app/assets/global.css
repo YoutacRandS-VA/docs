@@ -1,0 +1,157 @@
+label {
+	display: block;
+}
+
+input, .btn-default, select, textarea {
+	font-family: inherit;
+	/* font-size: inherit; */
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+input[type="range"] {
+	height: 0;
+}
+
+.btn-default {
+	background-color: #f4f4f4;
+  outline: none;
+  font-size: inherit;
+}
+
+.btn-default:active {
+	background-color: #ddd;
+}
+
+.btn-default:focus {
+	border-color: #666;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('fonts/Roboto/Roboto-LightItalic.woff2') format('woff2'),
+		url('fonts/Roboto/Roboto-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('fonts/Roboto/Roboto-Light.woff2') format('woff2'),
+		url('fonts/Roboto/Roboto-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('fonts/Roboto/Roboto-Bold.woff2') format('woff2'),
+		url('fonts/Roboto/Roboto-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rajdhani';
+	src: url('fonts/Rajdhani/Rajdhani-Bold.woff2') format('woff2'),
+		url('fonts/Rajdhani/Rajdhani-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rajdhani';
+	src: url('fonts/Rajdhani/Rajdhani-Medium.woff2') format('woff2'),
+		url('fonts/Rajdhani/Rajdhani-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rajdhani';
+	src: url('fonts/Rajdhani/Rajdhani-Regular.woff2') format('woff2'),
+		url('fonts/Rajdhani/Rajdhani-Regular.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Inconsolata';
+	src: local('Inconsolata Bold'), local('Inconsolata-Bold'),
+		url('fonts/Inconsolata/Inconsolata-Bold.woff2') format('woff2'),
+		url('fonts/Inconsolata/Inconsolata-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Inconsolata';
+	src: local('Inconsolata'), local('Inconsolata-Regular'),
+		url('fonts/Inconsolata/Inconsolata-Regular.woff2') format('woff2'),
+		url('fonts/Inconsolata/Inconsolata-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+code, pre {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+h1, h2, h3 {
+  font-family: Rajdhani, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  font-weight: 300;
+  padding: 0.5em 0;
+  line-height: 1.2;
+}
+
+a { text-decoration: none; color: rgb(20,87,138); }
+strong { font-weight: 800; }
+
+body {
+	padding-top: 4em;
+}
+
+
+/* atreyu resets */
+body {
+	background: #fff;
+	font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-weight: 300;
+	color: #333;
+	margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+button:focus, input:focus {
+  outline: none;
+}
+
+ul {
+	padding-inline-start: 0px;
+}

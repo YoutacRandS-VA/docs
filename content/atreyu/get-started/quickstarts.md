@@ -2,6 +2,7 @@
 type: overview
 pcx_content_type: get-started
 title: Quickstarts
+hidden: true
 weight: 3
 layout: list
 ---

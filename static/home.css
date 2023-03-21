@@ -276,9 +276,9 @@
 }
 
 @media (max-width:48em) {
-    .SiteHeader--nav {
-        display: none
-    }
+  .DocsNavLogoLockup--text {
+    display: none;
+  }
 }
 
 @media (max-width:768px) {
@@ -309,12 +309,6 @@
     .SiteHeader--theme-toggle {
         padding-left: 0;
         padding-right: 1.1rem
-    }
-}
-
-@media (max-width:1024px) {
-    .SiteHeader--nav {
-        display: none
     }
 }
 
