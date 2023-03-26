@@ -14,7 +14,7 @@ meta:
 # Overview
 
 **attention**: This is early pre-release software. Things will still be missing, break or change without warning.
-If you want to try the preview, please consider reaching out with a short description of your usecase to try.ayu@ntr.io, i am happy to give you feedback if the usecase is allready feasible and help you setup.
+If you want to try the preview, please consider reaching out with a short description of your usecase to try.ayu@ntr.io, i am happy to give you feedback if the usecase is already feasible and help you setup.
 
 ## Intro
 

@@ -3,7 +3,7 @@
   <head>
     {{- partial "head.meta" (dict "Context" . "Product" "home") -}}
 
-    <link rel="stylesheet" href="home.css"/>
+    <link rel="stylesheet" href="/docs/home.css"/>
     {{- partial "script" (dict "src" "theme.ts" "inline" true "format" "iife") -}}
     <!-- <script>var $$r=document.documentElement;$$r.className='';!function(){var a=localStorage.getItem("dark");(a=a&&+a)||a||window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,$$r.classList.toggle("dark",a=!!a),localStorage.setItem("dark",+a+"")}()</script> -->
     {{- partial "script" (dict "src" "home.ts" "defer" true) -}}
@@ -12,7 +12,7 @@
     <div class="DocsPage">
       <div class="SiteHeader">
         <div class="SiteHeader--logo-section">
-          <a aria-current="page" class="SiteHeader--cloudflare-logo-link Link Link-without-underline" href="docs/">
+          <a aria-current="page" class="SiteHeader--cloudflare-logo-link Link Link-without-underline" href="/docs/">
             <div class="DocsNavLogoLockup">
               {{- partial "logo" "Developers" -}}
             </div>
@@ -47,11 +47,11 @@
         {{- end -}}
 
         <div class="SiteHeader--nav">
-          <a class="SiteHeader--nav-link" href="atreyu/"><span>Docs</span></a>
+          <a class="SiteHeader--nav-link" href="/docs/atreyu/"><span>Docs</span></a>
           <!-- <a class="SiteHeader--nav-link" href="learning-paths/"><span>Learning paths</span></a>
           <a class="SiteHeader--nav-link" href="tutorials/"><span>Tutorials</span></a> -->
           <a class="SiteHeader--nav-link" href="mailto:hello.ayu@ntr.io"><span>Contact</span></a>
-          <a class="SiteHeader--nav-link" href="used/"><span>Stack</span></a>
+          <a class="SiteHeader--nav-link" href="/docs/used/"><span>Stack</span></a>
 
           <div class="DocsToolbar--tools-icon-item" style="margin-left: 0.8rem;">
             <div class="Tooltip---root">

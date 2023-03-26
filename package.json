@@ -4,12 +4,13 @@
   "name": "atreyu-docs",
   "description": "Atreyu Developer Docs",
   "scripts": {
-    "dev": "hugo serve -D",
+    "dev": "./hugo serve -D",
     "lint": "tsm bin/format.ts --check",
     "crawl": "tsm bin/crawl.ts",
     "prebuild": "tsm bin/highlight.ts replace",
-    "build": "hugo --minify",
-    "postbuild": "tsm bin/highlight.ts restore"
+    "build": "./hugo --minify",
+    "postbuild": "tsm bin/highlight.ts restore",
+    "release": "pnpm prebuild && pnpm build && pnpm postbuild && rm -R /Users/jan/Dev/cloudless/atreyu/app/docs && mv ./public /Users/jan/Dev/cloudless/atreyu/app/docs"
   },
   "dependencies": {
     "fromnow": "3.0.1"
